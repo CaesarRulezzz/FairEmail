@@ -597,7 +597,7 @@ dependencies {
     def overscroll_version = "1.1.1"
     def appauth_version = "0.11.1"
     def jcharset_version = "2.1"
-    def apache_poi = "3.17" // Do not update
+    def apache_poi = "5.2.1" // Do not update
     def outlook_parser_version = "1.7.13" // Do not update
     def reactivestreams_version = "1.0.3"
     def rxjava2_version = "2.2.21"
@@ -719,7 +719,7 @@ dependencies {
     implementation "androidx.work:work-runtime:$work_version"
     // implementation "com.google.guava:listenablefuture:1.0"
     // https://mvnrepository.com/artifact/com.google.guava/guava
-    implementation "com.google.guava:guava:33.1.0-android" // ListenableFuture
+    implementation "com.google.guava:guava:33.5.0-android" // ListenableFuture
 
     // https://mvnrepository.com/artifact/androidx.exifinterface/exifinterface
     implementation "androidx.exifinterface:exifinterface:$exif_version"
