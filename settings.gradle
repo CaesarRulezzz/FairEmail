@@ -1,3 +1,6 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.10.0'
+}
 include ':app', ':colorpicker', ':openpgp-api'
 project(':colorpicker').projectDir = new File('colorpicker')
 project(':openpgp-api').projectDir = new File('openpgp-api')
