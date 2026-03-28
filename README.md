@@ -1,3 +1,4 @@
+[![Android CI](https://github.com/CaesarRulezzz/FairEmail/actions/workflows/android.yml/badge.svg?branch=master)](https://github.com/CaesarRulezzz/FairEmail/actions/workflows/android.yml)
 <img src="https://github.com/M66B/FairEmail/raw/master/images/banner7_long.png" />
 
 <p align="center">
