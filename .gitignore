@@ -24,3 +24,5 @@ crowdin.properties
 app/.cxx/
 build
 captures
+release.keystore
+*.asc

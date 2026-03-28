@@ -46,12 +46,13 @@ jobs:
     #gpg -c --armor --s2k-mode 3 --s2k-digest-algo SHA256 --s2k-count 10000000 --cipher-algo AES-256 <file>
     - name: Decrypt secrets
       run: |
-        echo "${{ secrets.KEYSTORE }}" > keystore.asc
-        gpg -d --passphrase "${PASSWORD}" --batch keystore.asc > Android.keystore
-        echo "${{ secrets.KEYSTORE_PROPERTIES }}" > keystore.properties.asc
-        gpg -d --passphrase "${PASSWORD}" --batch keystore.properties.asc > keystore.properties
-        echo "${{ secrets.LOCAL_PROPERTIES }}" > local.properties.asc
-        gpg -d --passphrase "${PASSWORD}" --batch local.properties.asc > local.properties
+        echo "${{ secrets.RELEASE_KEYSTORE }}" > keystore.asc
+        gpg -d --passphrase "${{ secrets.RELEASE_KEYSTORE_PASSPHRASE }}" --batch keystore.asc > release.keystore
+        echo "storeFile=../release.keystore" > keystore.properties
+        echo "storePassword=$PASSWORD" >> keystore.properties
+        echo "keyAlias=alias" >> keystore.properties
+        echo "keyPassword=$PASSWORD" >> keystore.properties
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Check with Lint
